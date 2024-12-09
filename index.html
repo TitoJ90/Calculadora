@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Subsídios e Contribuições</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+         <div class="logos"> 
+            <img src="CONTITEC.png" alt="Logo 1"> 
+            <img src="aud.png" alt="Logo 2"> 
+          
+        </div> 
+        <div class="nav-title"> 
+            <h1>CALCULADORA DE IRT & INSS</h1>
+            
+        </div>
+        </nav>
+        
+    <div class="container">
+        <h1></h1>
+        <form id="calculoForm">
+            <div class="form-group">
+                <label for="valorBruto">
+                    <i class="fa fa-money"></i>
+                </label>
+                <input type="number" id="valorBruto" name="valorBruto"  placeholder="Salário Total">
+            </div>
+            <div class="form-group">
+                <label for="subsidiariosTransporte">
+                    <i class="fa fa-bus"></i>
+                </label>
+                <input type="number" id="subsidiariosTransporte" name="subsidiariosTransporte" placeholder="Subsídios de Transporte">
+            </div>
+            <div class="form-group">
+                <label for="subsidiariosAlimentacao">
+                    <i class="fa fa-cutlery"></i>
+                </label>
+                <input type="number" id="subsidiariosAlimentacao" name="subsidiariosAlimentacao"  placeholder="Subsídios de Alimentação">
+            </div>
+            <div class="form-group">
+                <label for="segurancaSocial"></label>
+                <input type="text" id="segurancaSocial" name="segurancaSocial" readonly  placeholder="Segurança Social (3%):" >
+            </div>
+            <div class="form-group">
+                <label for="valorLiquido"></label>
+                <input type="text" id="valorLiquido" name="valorLiquido" readonly   placeholder="Valor Líquido:">
+            </div>
+            <div class="form-group">
+                <label for="irt"></label>
+                <input type="text" id="irt" name="irt" readonly  placeholder="Cálculo do IRT:">
+            </div>
+            <button type="button" onclick="calcularValores()">Calcular</button>
+        </form>
+
+        <div class="form-group">
+            <label for="resultados"></label>
+            <table id="resultados" aria-placeholder="Valores Calculados:">
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        
+                        <th>3%</th>
+                        <th>Valor Líquido</th>
+                        <th>IRT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados serão adicionados aqui -->
+                </tbody>
+            </table>
+        </div>
+        <button type="button" onclick="limparValores()">Limpar Dados</button>
+    </div>
+    <footer>
+        
+        <p> &copy;Programa Privado para uso Interno.<br> EMPRESA NUMINA PRESTAÇÃO DE SERVIÇOS ,CONTITEC CONSULTING , AURODAN PRESTAÇÃO DE SERVIÇOS<br>ANGOLA/LUANDA 2024 / Criado por Tito J © Igor contacto: (+244) 923 626 315</p> </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
